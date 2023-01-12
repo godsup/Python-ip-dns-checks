@@ -64,7 +64,7 @@ with open('info.csv', 'r', newline='') as csvfile:
         results_dig.append(checkdns(dns))
         results_nmap.append(checkdns(ip))
 
-        with open('Output Final.csv', 'a', newline='') as csvoutput:
+        with open('output.csv', 'a', newline='') as csvoutput:
             output = csv.writer(csvoutput)
             if file:
                 something = 'nmap'
