@@ -27,7 +27,7 @@ pipeline {
                 sh ('git commit -m "automatic commit" output.csv')
                 //sh ('git remote add origin https://github.com/godsup/Python-ip-dns-checks.git')
                 sh ('git checkout main')
-                sh ('git push') 
+                sh ('git push --set-upstream origin main') 
            }
         }
     }
