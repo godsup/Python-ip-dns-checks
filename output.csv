@@ -1,0 +1,7 @@
+DNS,IP,Ping,DNS,NMAP
+potatoes.com,127.0.0.1,yes,yes,open
+potatoe.uk,192.168.88.22,no,yes,closed
+bum.bam,9.69.23.1,no,no,closed
+tomatoess.lv,10.0.0.1,no,no,closed
+ec2-3-65-218-177.eu-central-1.compute.amazonaws.com,3.65.218.177,no,yes,open
+sshopeneddz.com,3.71.43.115,no,no,closed
