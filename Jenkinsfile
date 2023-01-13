@@ -10,7 +10,7 @@ pipeline {
 
         stage ("Clone the repository") {
             steps {
-                sh ('rm -r Python-ip-dns-checks')
+                // sh ('rm -r Python-ip-dns-checks')
                 sh ('git clone https://github.com/godsup/Python-ip-dns-checks.git')
                 // sh ('cd /Terraform-ec2-docker-jenkins-pythonscript') 
             }
