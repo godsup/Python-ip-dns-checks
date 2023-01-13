@@ -24,7 +24,7 @@ pipeline {
         stage ("Add the file and commit it") {
             steps {
                 sh ('git add output.csv')
-                sh ('git commit output.csv')
+                sh ('git commit -m "automatic commit" output.csv')
                 sh ('git remote add origin https://github.com/godsup/Python-ip-dns-checks.git')
                 sh ('git push -u origin main') 
            }
