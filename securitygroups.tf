@@ -1,4 +1,5 @@
-resource "aws_security_group" "allow-ssh-http" {
+resource "aws_security_group" "allowports" {
+vpc_id = "vpc-016e1e9b7a6a38f7a"
   name   = "allowports"
   egress {
     from_port   = 0

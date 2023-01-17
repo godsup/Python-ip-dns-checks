@@ -12,17 +12,24 @@ provider "aws" {
   region = "eu-central-1"
 }
 
+resource "aws_key_pair" "deployer" {
+  key_name   = "masterkey"
+  public_key = file("~/.ssh/id_rsa.pub")
+}
 
 resource "aws_instance" "instance" {
   count = 1
   ami = "ami-065deacbcaac64cf2"
   #ami                    = data.aws_ami.ubuntu_latest.id
   instance_type          = "t2.micro"
-  key_name               = "gkey"
+  key_name               = aws_key_pair.deployer.key_name
   user_data              = file("dockerjenkins.sh")
+  vpc_security_group_ids = [aws_security_group.allowports.id]
   tags = {
     Name = "dockerjenkinss"
   }
+
+
 #   connection {
 #     type = "ssh"
 #     host = self.public_ip
